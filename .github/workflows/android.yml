@@ -19,12 +19,17 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      # - uses: gradle/actions/setup-gradle@v4
+        # with:
+          # gradle-version: "8.10.1"
+
       - name: Create out directory
         run: mkdir out
 
       - name: Build Debug .apk
         run: |
-          gradle :app:assembleDebug
+          chmod +x gradlew
+          ./gradlew :app:assembleDebug
           find .
           mv app/build/outputs/apk/debug/app-debug.apk out/app-debug.apk
 
