@@ -1,0 +1,110 @@
+package org.lwjgl.vulkan;
+
+/* JADX WARN: Classes with same name are omitted, all sources:
+  DroidBridge.Launcher-v0.3.9.apk:assets/components/lwjgl3.3.3/lwjgl-glfw-classes.jar:org/lwjgl/vulkan/NVDeviceDiagnosticCheckpoints.class
+  DroidBridge.Launcher-v0.3.9.apk:assets/components/lwjgl3.4.1/lwjgl-glfw-classes.jar:org/lwjgl/vulkan/NVDeviceDiagnosticCheckpoints.class
+ */
+/* JADX INFO: loaded from: DroidBridge.Launcher-v0.3.9.apk:assets/components/lwjgl3.3.3/lwjgl-glfw-classes.jar:org/lwjgl/vulkan/NVDeviceDiagnosticCheckpoints.class */
+public class NVDeviceDiagnosticCheckpoints {
+    public static final int VK_NV_DEVICE_DIAGNOSTIC_CHECKPOINTS_SPEC_VERSION = 2;
+    public static final java.lang.String VK_NV_DEVICE_DIAGNOSTIC_CHECKPOINTS_EXTENSION_NAME = "VK_NV_device_diagnostic_checkpoints";
+    public static final int VK_STRUCTURE_TYPE_CHECKPOINT_DATA_NV = 1000206000;
+    public static final int VK_STRUCTURE_TYPE_QUEUE_FAMILY_CHECKPOINT_PROPERTIES_NV = 1000206001;
+
+    protected NVDeviceDiagnosticCheckpoints() {
+            r3 = this;
+            r0 = r3
+            r0.<init>()
+            java.lang.UnsupportedOperationException r0 = new java.lang.UnsupportedOperationException
+            r1 = r0
+            r1.<init>()
+            throw r0
+    }
+
+    public static void vkCmdSetCheckpointNV(org.lwjgl.vulkan.VkCommandBuffer r7, @org.lwjgl.system.NativeType("void const *") long r8) {
+            r0 = r7
+            org.lwjgl.vulkan.VKCapabilitiesDevice r0 = r0.getCapabilities()
+            long r0 = r0.vkCmdSetCheckpointNV
+            r10 = r0
+            boolean r0 = org.lwjgl.system.Checks.CHECKS
+            if (r0 == 0) goto L13
+            r0 = r10
+            long r0 = org.lwjgl.system.Checks.check(r0)
+        L13:
+            r0 = r7
+            long r0 = r0.address()
+            r1 = r8
+            r2 = r10
+            org.lwjgl.system.JNI.callPPV(r0, r1, r2)
+            return
+    }
+
+    public static void nvkGetQueueCheckpointDataNV(org.lwjgl.vulkan.VkQueue r9, long r10, long r12) {
+            r0 = r9
+            org.lwjgl.vulkan.VKCapabilitiesDevice r0 = r0.getCapabilities()
+            long r0 = r0.vkGetQueueCheckpointDataNV
+            r14 = r0
+            boolean r0 = org.lwjgl.system.Checks.CHECKS
+            if (r0 == 0) goto L15
+            r0 = r14
+            long r0 = org.lwjgl.system.Checks.check(r0)
+        L15:
+            r0 = r9
+            long r0 = r0.address()
+            r1 = r10
+            r2 = r12
+            r3 = r14
+            org.lwjgl.system.JNI.callPPPV(r0, r1, r2, r3)
+            return
+    }
+
+    public static void vkGetQueueCheckpointDataNV(org.lwjgl.vulkan.VkQueue r6, @org.lwjgl.system.NativeType("uint32_t *") java.nio.IntBuffer r7, @javax.annotation.Nullable @org.lwjgl.system.NativeType("VkCheckpointDataNV *") org.lwjgl.vulkan.VkCheckpointDataNV.Buffer r8) {
+            boolean r0 = org.lwjgl.system.Checks.CHECKS
+            if (r0 == 0) goto L17
+            r0 = r7
+            r1 = 1
+            org.lwjgl.system.Checks.check(r0, r1)
+            r0 = r8
+            r1 = r7
+            r2 = r7
+            int r2 = r2.position()
+            int r1 = r1.get(r2)
+            org.lwjgl.system.Checks.checkSafe(r0, r1)
+        L17:
+            r0 = r6
+            r1 = r7
+            long r1 = org.lwjgl.system.MemoryUtil.memAddress(r1)
+            r2 = r8
+            long r2 = org.lwjgl.system.MemoryUtil.memAddressSafe(r2)
+            nvkGetQueueCheckpointDataNV(r0, r1, r2)
+            return
+    }
+
+    public static void vkGetQueueCheckpointDataNV(org.lwjgl.vulkan.VkQueue r8, @org.lwjgl.system.NativeType("uint32_t *") int[] r9, @javax.annotation.Nullable @org.lwjgl.system.NativeType("VkCheckpointDataNV *") org.lwjgl.vulkan.VkCheckpointDataNV.Buffer r10) {
+            r0 = r8
+            org.lwjgl.vulkan.VKCapabilitiesDevice r0 = r0.getCapabilities()
+            long r0 = r0.vkGetQueueCheckpointDataNV
+            r11 = r0
+            boolean r0 = org.lwjgl.system.Checks.CHECKS
+            if (r0 == 0) goto L1f
+            r0 = r11
+            long r0 = org.lwjgl.system.Checks.check(r0)
+            r0 = r9
+            r1 = 1
+            org.lwjgl.system.Checks.check(r0, r1)
+            r0 = r10
+            r1 = r9
+            r2 = 0
+            r1 = r1[r2]
+            org.lwjgl.system.Checks.checkSafe(r0, r1)
+        L1f:
+            r0 = r8
+            long r0 = r0.address()
+            r1 = r9
+            r2 = r10
+            long r2 = org.lwjgl.system.MemoryUtil.memAddressSafe(r2)
+            r3 = r11
+            org.lwjgl.system.JNI.callPPPV(r0, r1, r2, r3)
+            return
+    }
+}

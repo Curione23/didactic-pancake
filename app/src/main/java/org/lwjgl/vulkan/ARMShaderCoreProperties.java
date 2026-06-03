@@ -1,0 +1,19 @@
+package org.lwjgl.vulkan;
+
+/* JADX WARN: Classes with same name are omitted, all sources:
+  DroidBridge.Launcher-v0.3.9.apk:assets/components/lwjgl3.3.3/lwjgl-glfw-classes.jar:org/lwjgl/vulkan/ARMShaderCoreProperties.class
+  DroidBridge.Launcher-v0.3.9.apk:assets/components/lwjgl3.4.1/lwjgl-glfw-classes.jar:org/lwjgl/vulkan/ARMShaderCoreProperties.class
+ */
+/* JADX INFO: loaded from: DroidBridge.Launcher-v0.3.9.apk:assets/components/lwjgl3.3.3/lwjgl-glfw-classes.jar:org/lwjgl/vulkan/ARMShaderCoreProperties.class */
+public final class ARMShaderCoreProperties {
+    public static final int VK_ARM_SHADER_CORE_PROPERTIES_SPEC_VERSION = 1;
+    public static final java.lang.String VK_ARM_SHADER_CORE_PROPERTIES_EXTENSION_NAME = "VK_ARM_shader_core_properties";
+    public static final int VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_SHADER_CORE_PROPERTIES_ARM = 1000415000;
+
+    private ARMShaderCoreProperties() {
+            r2 = this;
+            r0 = r2
+            r0.<init>()
+            return
+    }
+}

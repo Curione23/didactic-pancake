@@ -1,0 +1,25 @@
+package org.lwjgl.opengl;
+
+/* JADX WARN: Classes with same name are omitted, all sources:
+  DroidBridge.Launcher-v0.3.9.apk:assets/components/lwjgl3.3.3/lwjgl-glfw-classes.jar:org/lwjgl/opengl/NVCopyImage.class
+  DroidBridge.Launcher-v0.3.9.apk:assets/components/lwjgl3.4.1/lwjgl-glfw-classes.jar:org/lwjgl/opengl/NVCopyImage.class
+ */
+/* JADX INFO: loaded from: DroidBridge.Launcher-v0.3.9.apk:assets/components/lwjgl3.3.3/lwjgl-glfw-classes.jar:org/lwjgl/opengl/NVCopyImage.class */
+public class NVCopyImage {
+    protected NVCopyImage() {
+            r3 = this;
+            r0 = r3
+            r0.<init>()
+            java.lang.UnsupportedOperationException r0 = new java.lang.UnsupportedOperationException
+            r1 = r0
+            r1.<init>()
+            throw r0
+    }
+
+    public static native void glCopyImageSubDataNV(@org.lwjgl.system.NativeType("GLuint") int r0, @org.lwjgl.system.NativeType("GLenum") int r1, @org.lwjgl.system.NativeType("GLint") int r2, @org.lwjgl.system.NativeType("GLint") int r3, @org.lwjgl.system.NativeType("GLint") int r4, @org.lwjgl.system.NativeType("GLint") int r5, @org.lwjgl.system.NativeType("GLuint") int r6, @org.lwjgl.system.NativeType("GLenum") int r7, @org.lwjgl.system.NativeType("GLint") int r8, @org.lwjgl.system.NativeType("GLint") int r9, @org.lwjgl.system.NativeType("GLint") int r10, @org.lwjgl.system.NativeType("GLint") int r11, @org.lwjgl.system.NativeType("GLsizei") int r12, @org.lwjgl.system.NativeType("GLsizei") int r13, @org.lwjgl.system.NativeType("GLsizei") int r14);
+
+    static {
+            org.lwjgl.opengl.GL.initialize()
+            return
+    }
+}

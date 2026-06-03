@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="12"
+    android:versionName="0.3.9"
+    android:compileSdkVersion="35"
+    android:compileSdkVersionCodename="15"
+    package="ca.dnamobile.javalauncher"
+    platformBuildVersionCode="35"
+    platformBuildVersionName="15">
+    <uses-sdk
+        android:minSdkVersion="26"
+        android:targetSdkVersion="35"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"/>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"/>
+    <queries>
+        <package android:name="com.fcl.plugin.mobileglues"/>
+        <package android:name="com.bzlzhh.plugin.ngg"/>
+        <package android:name="com.bzlzhh.plugin.ngg.angleless"/>
+        <package android:name="com.mio.plugin.renderer.gl4es"/>
+        <package android:name="com.mio.plugin.renderer.mesa2500.rc1"/>
+        <package android:name="com.mio.plugin.renderer.mobileglues"/>
+        <package android:name="com.mio.plugin.renderer.ltw"/>
+        <package android:name="com.mio.plugin.renderer.angle"/>
+        <package android:name="com.mio.plugin.renderer.mesa2319"/>
+        <package android:name="com.mio.plugin.renderer.mesa2427"/>
+        <package android:name="com.mio.plugin.renderer.mesa2434"/>
+        <package android:name="com.mio.plugin.renderer.mesa2500"/>
+        <package android:name="com.fcl.plugin.renderer.mobileglues"/>
+        <package android:name="com.fcl.plugin.renderer.ltw"/>
+        <package android:name="com.fcl.plugin.renderer.gl4es"/>
+        <package android:name="com.fcl.plugin.renderer.angle"/>
+        <package android:name="com.fcl.plugin.renderer.mesa"/>
+        <package android:name="com.fcl.plugin.driver.freedreno"/>
+        <package android:name="com.fcl.plugin.driver.turnip"/>
+        <package android:name="com.fcl.plugin.turnip"/>
+        <package android:name="com.fcl.plugin.adreno"/>
+        <package android:name="com.mio.plugin.driver.freedreno"/>
+        <package android:name="com.mio.plugin.driver.turnip"/>
+        <package android:name="com.mio.plugin.driver.adreno"/>
+        <package android:name="com.bzlzhh.plugin.driver.freedreno"/>
+        <package android:name="com.bzlzhh.plugin.driver.turnip"/>
+        <package android:name="com.bzlzhh.plugin.turnip"/>
+        <package android:name="com.bzlzhh.plugin.adreno"/>
+        <package android:name="com.tungsten.fcl.plugin.driver.freedreno"/>
+        <package android:name="com.tungsten.fcl.plugin.driver.turnip"/>
+        <package android:name="ca.dnamobile.renderer.litegles"/>
+        <provider android:authorities="ca.dnamobile.renderer.litegles.settings"/>
+        <package android:name="ca.dnamobile.javalauncher.ffmpeg"/>
+        <package android:name="ca.dnamobile.javalauncher.ffmpeg.debug"/>
+        <package android:name="ca.dnamobile.javalauncher.debug.ffmpeg"/>
+        <package android:name="ca.dnamobile.javalauncher.ffmpegplugin"/>
+        <package android:name="ca.dnamobile.javalauncher.ffmpegplugin.debug"/>
+        <intent>
+            <action android:name="ca.dnamobile.javalauncher.ffmpeg.PLUGIN"/>
+        </intent>
+        <intent>
+            <action android:name="ca.dnamobile.javalauncher.FFMPEG_PLUGIN"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.MAIN"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+    </queries>
+    <permission
+        android:name="ca.dnamobile.javalauncher.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="ca.dnamobile.javalauncher.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <application
+        android:theme="@style/Theme.JavaLauncher"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher_droidbridge"
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:extractNativeLibs="true"
+        android:roundIcon="@mipmap/ic_launcher_droidbridge_round"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:allowNativeHeapPointerTagging="false">
+        <activity
+            android:name="net.openid.appauth.RedirectUriReceiverActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="droidbridge"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ca.dnamobile.javalauncher.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="fullSensor"
+            android:configChanges="uiMode|keyboardHidden|keyboard">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ca.dnamobile.javalauncher.MainActivity"
+            android:exported="false"
+            android:configChanges="uiMode|keyboardHidden|keyboard"/>
+        <activity
+            android:name="ca.dnamobile.javalauncher.launcher.JavaLaunch"
+            android:exported="false"
+            android:configChanges="uiMode|keyboardHidden|keyboard"/>
+        <activity
+            android:name="ca.dnamobile.javalauncher.ModpackUpdateDetailsActivity"
+            android:exported="false"/>
+        <activity
+            android:name="ca.dnamobile.javalauncher.LauncherSettingsActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor"
+            android:configChanges="uiMode|keyboardHidden|keyboard"/>
+        <activity
+            android:name="ca.dnamobile.javalauncher.InstanceDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor"
+            android:configChanges="uiMode|keyboardHidden|keyboard"/>
+        <activity
+            android:name="ca.dnamobile.javalauncher.ContentBrowserActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor"
+            android:configChanges="uiMode|keyboardHidden|keyboard"/>
+        <activity
+            android:name="ca.dnamobile.javalauncher.input.GamepadMappingTransferActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor"
+            android:configChanges="uiMode|keyboardHidden|keyboard"/>
+        <activity
+            android:name="ca.dnamobile.javalauncher.ContentProjectDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="fullSensor"
+            android:configChanges="uiMode|keyboardHidden|keyboard"/>
+        <activity
+            android:name="ca.dnamobile.javalauncher.settings.SimpleVoiceChatPermissionActivity"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"/>
+        <activity
+            android:name="ca.dnamobile.javalauncher.fancymenu.MicrosoftAuthActivity"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:name="ca.dnamobile.javalauncher.ErrorActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|touchscreen"/>
+        <activity
+            android:name="ca.dnamobile.javalauncher.GameActivity"
+            android:exported="false"
+            android:process=":game"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|touchscreen"/>
+        <activity
+            android:name="ca.dnamobile.javalauncher.controls.ControlsActivity"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity
+            android:name="ca.dnamobile.javalauncher.controls.ControlsEditorActivity"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="ca.dnamobile.javalauncher.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+        <provider
+            android:name="ca.dnamobile.javalauncher.storage.JavaLauncherDocumentsProvider"
+            android:permission="android.permission.MANAGE_DOCUMENTS"
+            android:exported="true"
+            android:authorities="ca.dnamobile.javalauncher.documents"
+            android:grantUriPermissions="true">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER"/>
+            </intent-filter>
+        </provider>
+        <service
+            android:name="ca.dnamobile.javalauncher.installation.InstallationForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.Translucent.NoTitleBar"
+            android:name="net.openid.appauth.AuthorizationManagementActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:configChanges="smallestScreenSize|screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="ca.dnamobile.javalauncher.androidx-startup">
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup"/>
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup"/>
+        </provider>
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/Theme.PlayCore.Transparent"
+            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+            android:exported="false"
+            android:stateNotNeeded="true"/>
+    </application>
+</manifest>

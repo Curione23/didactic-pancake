@@ -1,0 +1,957 @@
+package org.lwjgl.vulkan;
+
+/* JADX WARN: Classes with same name are omitted, all sources:
+  DroidBridge.Launcher-v0.3.9.apk:assets/components/lwjgl3.3.3/lwjgl-glfw-classes.jar:org/lwjgl/vulkan/VkResolveImageInfo2.class
+  DroidBridge.Launcher-v0.3.9.apk:assets/components/lwjgl3.4.1/lwjgl-glfw-classes.jar:org/lwjgl/vulkan/VkResolveImageInfo2.class
+ */
+/* JADX INFO: loaded from: DroidBridge.Launcher-v0.3.9.apk:assets/components/lwjgl3.3.3/lwjgl-glfw-classes.jar:org/lwjgl/vulkan/VkResolveImageInfo2.class */
+public class VkResolveImageInfo2 extends org.lwjgl.system.Struct<org.lwjgl.vulkan.VkResolveImageInfo2> implements org.lwjgl.system.NativeResource {
+    public static final int SIZEOF = 0;
+    public static final int ALIGNOF = 0;
+    public static final int STYPE = 0;
+    public static final int PNEXT = 0;
+    public static final int SRCIMAGE = 0;
+    public static final int SRCIMAGELAYOUT = 0;
+    public static final int DSTIMAGE = 0;
+    public static final int DSTIMAGELAYOUT = 0;
+    public static final int REGIONCOUNT = 0;
+    public static final int PREGIONS = 0;
+
+    /* JADX WARN: Classes with same name are omitted, all sources:
+      DroidBridge.Launcher-v0.3.9.apk:assets/components/lwjgl3.3.3/lwjgl-glfw-classes.jar:org/lwjgl/vulkan/VkResolveImageInfo2$Buffer.class
+      DroidBridge.Launcher-v0.3.9.apk:assets/components/lwjgl3.4.1/lwjgl-glfw-classes.jar:org/lwjgl/vulkan/VkResolveImageInfo2$Buffer.class
+     */
+    /* JADX INFO: loaded from: DroidBridge.Launcher-v0.3.9.apk:assets/components/lwjgl3.3.3/lwjgl-glfw-classes.jar:org/lwjgl/vulkan/VkResolveImageInfo2$Buffer.class */
+    public static class Buffer extends org.lwjgl.system.StructBuffer<org.lwjgl.vulkan.VkResolveImageInfo2, org.lwjgl.vulkan.VkResolveImageInfo2.Buffer> implements org.lwjgl.system.NativeResource {
+        private static final org.lwjgl.vulkan.VkResolveImageInfo2 ELEMENT_FACTORY = null;
+
+        public Buffer(java.nio.ByteBuffer r6) {
+                r5 = this;
+                r0 = r5
+                r1 = r6
+                r2 = r6
+                int r2 = r2.remaining()
+                int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.SIZEOF
+                int r2 = r2 / r3
+                r0.<init>(r1, r2)
+                return
+        }
+
+        public Buffer(long r10, int r12) {
+                r9 = this;
+                r0 = r9
+                r1 = r10
+                r2 = 0
+                r3 = -1
+                r4 = 0
+                r5 = r12
+                r6 = r12
+                r0.<init>(r1, r2, r3, r4, r5, r6)
+                return
+        }
+
+        Buffer(long r10, @javax.annotation.Nullable java.nio.ByteBuffer r12, int r13, int r14, int r15, int r16) {
+                r9 = this;
+                r0 = r9
+                r1 = r10
+                r2 = r12
+                r3 = r13
+                r4 = r14
+                r5 = r15
+                r6 = r16
+                r0.<init>(r1, r2, r3, r4, r5, r6)
+                return
+        }
+
+        @Override // org.lwjgl.system.CustomBuffer
+        protected org.lwjgl.vulkan.VkResolveImageInfo2.Buffer self() {
+                r2 = this;
+                r0 = r2
+                return r0
+        }
+
+        @Override // org.lwjgl.system.StructBuffer
+        protected org.lwjgl.vulkan.VkResolveImageInfo2 getElementFactory() {
+                r2 = this;
+                org.lwjgl.vulkan.VkResolveImageInfo2 r0 = org.lwjgl.vulkan.VkResolveImageInfo2.Buffer.ELEMENT_FACTORY
+                return r0
+        }
+
+        @org.lwjgl.system.NativeType("VkStructureType")
+        public int sType() {
+                r3 = this;
+                r0 = r3
+                long r0 = r0.address()
+                int r0 = org.lwjgl.vulkan.VkResolveImageInfo2.nsType(r0)
+                return r0
+        }
+
+        @org.lwjgl.system.NativeType("void const *")
+        public long pNext() {
+                r3 = this;
+                r0 = r3
+                long r0 = r0.address()
+                long r0 = org.lwjgl.vulkan.VkResolveImageInfo2.npNext(r0)
+                return r0
+        }
+
+        @org.lwjgl.system.NativeType("VkImage")
+        public long srcImage() {
+                r3 = this;
+                r0 = r3
+                long r0 = r0.address()
+                long r0 = org.lwjgl.vulkan.VkResolveImageInfo2.nsrcImage(r0)
+                return r0
+        }
+
+        @org.lwjgl.system.NativeType("VkImageLayout")
+        public int srcImageLayout() {
+                r3 = this;
+                r0 = r3
+                long r0 = r0.address()
+                int r0 = org.lwjgl.vulkan.VkResolveImageInfo2.nsrcImageLayout(r0)
+                return r0
+        }
+
+        @org.lwjgl.system.NativeType("VkImage")
+        public long dstImage() {
+                r3 = this;
+                r0 = r3
+                long r0 = r0.address()
+                long r0 = org.lwjgl.vulkan.VkResolveImageInfo2.ndstImage(r0)
+                return r0
+        }
+
+        @org.lwjgl.system.NativeType("VkImageLayout")
+        public int dstImageLayout() {
+                r3 = this;
+                r0 = r3
+                long r0 = r0.address()
+                int r0 = org.lwjgl.vulkan.VkResolveImageInfo2.ndstImageLayout(r0)
+                return r0
+        }
+
+        @org.lwjgl.system.NativeType("uint32_t")
+        public int regionCount() {
+                r3 = this;
+                r0 = r3
+                long r0 = r0.address()
+                int r0 = org.lwjgl.vulkan.VkResolveImageInfo2.nregionCount(r0)
+                return r0
+        }
+
+        @org.lwjgl.system.NativeType("VkImageResolve2 const *")
+        public org.lwjgl.vulkan.VkImageResolve2.Buffer pRegions() {
+                r3 = this;
+                r0 = r3
+                long r0 = r0.address()
+                org.lwjgl.vulkan.VkImageResolve2$Buffer r0 = org.lwjgl.vulkan.VkResolveImageInfo2.npRegions(r0)
+                return r0
+        }
+
+        public org.lwjgl.vulkan.VkResolveImageInfo2.Buffer sType(@org.lwjgl.system.NativeType("VkStructureType") int r5) {
+                r4 = this;
+                r0 = r4
+                long r0 = r0.address()
+                r1 = r5
+                org.lwjgl.vulkan.VkResolveImageInfo2.nsType(r0, r1)
+                r0 = r4
+                return r0
+        }
+
+        public org.lwjgl.vulkan.VkResolveImageInfo2.Buffer sType$Default() {
+                r3 = this;
+                r0 = r3
+                r1 = 1000337005(0x3b9fee6d, float:0.0048807175)
+                org.lwjgl.vulkan.VkResolveImageInfo2$Buffer r0 = r0.sType(r1)
+                return r0
+        }
+
+        public org.lwjgl.vulkan.VkResolveImageInfo2.Buffer pNext(@org.lwjgl.system.NativeType("void const *") long r6) {
+                r5 = this;
+                r0 = r5
+                long r0 = r0.address()
+                r1 = r6
+                org.lwjgl.vulkan.VkResolveImageInfo2.npNext(r0, r1)
+                r0 = r5
+                return r0
+        }
+
+        public org.lwjgl.vulkan.VkResolveImageInfo2.Buffer srcImage(@org.lwjgl.system.NativeType("VkImage") long r6) {
+                r5 = this;
+                r0 = r5
+                long r0 = r0.address()
+                r1 = r6
+                org.lwjgl.vulkan.VkResolveImageInfo2.nsrcImage(r0, r1)
+                r0 = r5
+                return r0
+        }
+
+        public org.lwjgl.vulkan.VkResolveImageInfo2.Buffer srcImageLayout(@org.lwjgl.system.NativeType("VkImageLayout") int r5) {
+                r4 = this;
+                r0 = r4
+                long r0 = r0.address()
+                r1 = r5
+                org.lwjgl.vulkan.VkResolveImageInfo2.nsrcImageLayout(r0, r1)
+                r0 = r4
+                return r0
+        }
+
+        public org.lwjgl.vulkan.VkResolveImageInfo2.Buffer dstImage(@org.lwjgl.system.NativeType("VkImage") long r6) {
+                r5 = this;
+                r0 = r5
+                long r0 = r0.address()
+                r1 = r6
+                org.lwjgl.vulkan.VkResolveImageInfo2.ndstImage(r0, r1)
+                r0 = r5
+                return r0
+        }
+
+        public org.lwjgl.vulkan.VkResolveImageInfo2.Buffer dstImageLayout(@org.lwjgl.system.NativeType("VkImageLayout") int r5) {
+                r4 = this;
+                r0 = r4
+                long r0 = r0.address()
+                r1 = r5
+                org.lwjgl.vulkan.VkResolveImageInfo2.ndstImageLayout(r0, r1)
+                r0 = r4
+                return r0
+        }
+
+        public org.lwjgl.vulkan.VkResolveImageInfo2.Buffer pRegions(@org.lwjgl.system.NativeType("VkImageResolve2 const *") org.lwjgl.vulkan.VkImageResolve2.Buffer r5) {
+                r4 = this;
+                r0 = r4
+                long r0 = r0.address()
+                r1 = r5
+                org.lwjgl.vulkan.VkResolveImageInfo2.npRegions(r0, r1)
+                r0 = r4
+                return r0
+        }
+
+        @Override // org.lwjgl.system.StructBuffer
+        protected /* bridge */ /* synthetic */ org.lwjgl.system.Struct getElementFactory() {
+                r2 = this;
+                r0 = r2
+                org.lwjgl.vulkan.VkResolveImageInfo2 r0 = r0.getElementFactory()
+                return r0
+        }
+
+        @Override // org.lwjgl.system.CustomBuffer
+        protected /* bridge */ /* synthetic */ org.lwjgl.system.CustomBuffer self() {
+                r2 = this;
+                r0 = r2
+                org.lwjgl.vulkan.VkResolveImageInfo2$Buffer r0 = r0.self()
+                return r0
+        }
+
+        static {
+                r0 = -1
+                org.lwjgl.vulkan.VkResolveImageInfo2 r0 = org.lwjgl.vulkan.VkResolveImageInfo2.create(r0)
+                org.lwjgl.vulkan.VkResolveImageInfo2.Buffer.ELEMENT_FACTORY = r0
+                return
+        }
+    }
+
+    protected VkResolveImageInfo2(long r6, @javax.annotation.Nullable java.nio.ByteBuffer r8) {
+            r5 = this;
+            r0 = r5
+            r1 = r6
+            r2 = r8
+            r0.<init>(r1, r2)
+            return
+    }
+
+    @Override // org.lwjgl.system.Struct
+    protected org.lwjgl.vulkan.VkResolveImageInfo2 create(long r7, @javax.annotation.Nullable java.nio.ByteBuffer r9) {
+            r6 = this;
+            org.lwjgl.vulkan.VkResolveImageInfo2 r0 = new org.lwjgl.vulkan.VkResolveImageInfo2
+            r1 = r0
+            r2 = r7
+            r3 = r9
+            r1.<init>(r2, r3)
+            return r0
+    }
+
+    public VkResolveImageInfo2(java.nio.ByteBuffer r7) {
+            r6 = this;
+            r0 = r6
+            r1 = r7
+            long r1 = org.lwjgl.system.MemoryUtil.memAddress(r1)
+            r2 = r7
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.SIZEOF
+            java.nio.ByteBuffer r2 = __checkContainer(r2, r3)
+            r0.<init>(r1, r2)
+            return
+    }
+
+    @Override // org.lwjgl.system.Struct
+    public int sizeof() {
+            r2 = this;
+            int r0 = org.lwjgl.vulkan.VkResolveImageInfo2.SIZEOF
+            return r0
+    }
+
+    @org.lwjgl.system.NativeType("VkStructureType")
+    public int sType() {
+            r3 = this;
+            r0 = r3
+            long r0 = r0.address()
+            int r0 = nsType(r0)
+            return r0
+    }
+
+    @org.lwjgl.system.NativeType("void const *")
+    public long pNext() {
+            r3 = this;
+            r0 = r3
+            long r0 = r0.address()
+            long r0 = npNext(r0)
+            return r0
+    }
+
+    @org.lwjgl.system.NativeType("VkImage")
+    public long srcImage() {
+            r3 = this;
+            r0 = r3
+            long r0 = r0.address()
+            long r0 = nsrcImage(r0)
+            return r0
+    }
+
+    @org.lwjgl.system.NativeType("VkImageLayout")
+    public int srcImageLayout() {
+            r3 = this;
+            r0 = r3
+            long r0 = r0.address()
+            int r0 = nsrcImageLayout(r0)
+            return r0
+    }
+
+    @org.lwjgl.system.NativeType("VkImage")
+    public long dstImage() {
+            r3 = this;
+            r0 = r3
+            long r0 = r0.address()
+            long r0 = ndstImage(r0)
+            return r0
+    }
+
+    @org.lwjgl.system.NativeType("VkImageLayout")
+    public int dstImageLayout() {
+            r3 = this;
+            r0 = r3
+            long r0 = r0.address()
+            int r0 = ndstImageLayout(r0)
+            return r0
+    }
+
+    @org.lwjgl.system.NativeType("uint32_t")
+    public int regionCount() {
+            r3 = this;
+            r0 = r3
+            long r0 = r0.address()
+            int r0 = nregionCount(r0)
+            return r0
+    }
+
+    @org.lwjgl.system.NativeType("VkImageResolve2 const *")
+    public org.lwjgl.vulkan.VkImageResolve2.Buffer pRegions() {
+            r3 = this;
+            r0 = r3
+            long r0 = r0.address()
+            org.lwjgl.vulkan.VkImageResolve2$Buffer r0 = npRegions(r0)
+            return r0
+    }
+
+    public org.lwjgl.vulkan.VkResolveImageInfo2 sType(@org.lwjgl.system.NativeType("VkStructureType") int r5) {
+            r4 = this;
+            r0 = r4
+            long r0 = r0.address()
+            r1 = r5
+            nsType(r0, r1)
+            r0 = r4
+            return r0
+    }
+
+    public org.lwjgl.vulkan.VkResolveImageInfo2 sType$Default() {
+            r3 = this;
+            r0 = r3
+            r1 = 1000337005(0x3b9fee6d, float:0.0048807175)
+            org.lwjgl.vulkan.VkResolveImageInfo2 r0 = r0.sType(r1)
+            return r0
+    }
+
+    public org.lwjgl.vulkan.VkResolveImageInfo2 pNext(@org.lwjgl.system.NativeType("void const *") long r6) {
+            r5 = this;
+            r0 = r5
+            long r0 = r0.address()
+            r1 = r6
+            npNext(r0, r1)
+            r0 = r5
+            return r0
+    }
+
+    public org.lwjgl.vulkan.VkResolveImageInfo2 srcImage(@org.lwjgl.system.NativeType("VkImage") long r6) {
+            r5 = this;
+            r0 = r5
+            long r0 = r0.address()
+            r1 = r6
+            nsrcImage(r0, r1)
+            r0 = r5
+            return r0
+    }
+
+    public org.lwjgl.vulkan.VkResolveImageInfo2 srcImageLayout(@org.lwjgl.system.NativeType("VkImageLayout") int r5) {
+            r4 = this;
+            r0 = r4
+            long r0 = r0.address()
+            r1 = r5
+            nsrcImageLayout(r0, r1)
+            r0 = r4
+            return r0
+    }
+
+    public org.lwjgl.vulkan.VkResolveImageInfo2 dstImage(@org.lwjgl.system.NativeType("VkImage") long r6) {
+            r5 = this;
+            r0 = r5
+            long r0 = r0.address()
+            r1 = r6
+            ndstImage(r0, r1)
+            r0 = r5
+            return r0
+    }
+
+    public org.lwjgl.vulkan.VkResolveImageInfo2 dstImageLayout(@org.lwjgl.system.NativeType("VkImageLayout") int r5) {
+            r4 = this;
+            r0 = r4
+            long r0 = r0.address()
+            r1 = r5
+            ndstImageLayout(r0, r1)
+            r0 = r4
+            return r0
+    }
+
+    public org.lwjgl.vulkan.VkResolveImageInfo2 pRegions(@org.lwjgl.system.NativeType("VkImageResolve2 const *") org.lwjgl.vulkan.VkImageResolve2.Buffer r5) {
+            r4 = this;
+            r0 = r4
+            long r0 = r0.address()
+            r1 = r5
+            npRegions(r0, r1)
+            r0 = r4
+            return r0
+    }
+
+    public org.lwjgl.vulkan.VkResolveImageInfo2 set(int r5, long r6, long r8, int r10, long r11, int r13, org.lwjgl.vulkan.VkImageResolve2.Buffer r14) {
+            r4 = this;
+            r0 = r4
+            r1 = r5
+            org.lwjgl.vulkan.VkResolveImageInfo2 r0 = r0.sType(r1)
+            r0 = r4
+            r1 = r6
+            org.lwjgl.vulkan.VkResolveImageInfo2 r0 = r0.pNext(r1)
+            r0 = r4
+            r1 = r8
+            org.lwjgl.vulkan.VkResolveImageInfo2 r0 = r0.srcImage(r1)
+            r0 = r4
+            r1 = r10
+            org.lwjgl.vulkan.VkResolveImageInfo2 r0 = r0.srcImageLayout(r1)
+            r0 = r4
+            r1 = r11
+            org.lwjgl.vulkan.VkResolveImageInfo2 r0 = r0.dstImage(r1)
+            r0 = r4
+            r1 = r13
+            org.lwjgl.vulkan.VkResolveImageInfo2 r0 = r0.dstImageLayout(r1)
+            r0 = r4
+            r1 = r14
+            org.lwjgl.vulkan.VkResolveImageInfo2 r0 = r0.pRegions(r1)
+            r0 = r4
+            return r0
+    }
+
+    public org.lwjgl.vulkan.VkResolveImageInfo2 set(org.lwjgl.vulkan.VkResolveImageInfo2 r8) {
+            r7 = this;
+            r0 = r8
+            long r0 = r0.address()
+            r1 = r7
+            long r1 = r1.address()
+            int r2 = org.lwjgl.vulkan.VkResolveImageInfo2.SIZEOF
+            long r2 = (long) r2
+            org.lwjgl.system.MemoryUtil.memCopy(r0, r1, r2)
+            r0 = r7
+            return r0
+    }
+
+    public static org.lwjgl.vulkan.VkResolveImageInfo2 malloc() {
+            org.lwjgl.vulkan.VkResolveImageInfo2 r0 = new org.lwjgl.vulkan.VkResolveImageInfo2
+            r1 = r0
+            int r2 = org.lwjgl.vulkan.VkResolveImageInfo2.SIZEOF
+            long r2 = (long) r2
+            long r2 = org.lwjgl.system.MemoryUtil.nmemAllocChecked(r2)
+            r3 = 0
+            r1.<init>(r2, r3)
+            return r0
+    }
+
+    public static org.lwjgl.vulkan.VkResolveImageInfo2 calloc() {
+            org.lwjgl.vulkan.VkResolveImageInfo2 r0 = new org.lwjgl.vulkan.VkResolveImageInfo2
+            r1 = r0
+            r2 = 1
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.SIZEOF
+            long r3 = (long) r3
+            long r2 = org.lwjgl.system.MemoryUtil.nmemCallocChecked(r2, r3)
+            r3 = 0
+            r1.<init>(r2, r3)
+            return r0
+    }
+
+    public static org.lwjgl.vulkan.VkResolveImageInfo2 create() {
+            int r0 = org.lwjgl.vulkan.VkResolveImageInfo2.SIZEOF
+            java.nio.ByteBuffer r0 = org.lwjgl.BufferUtils.createByteBuffer(r0)
+            r6 = r0
+            org.lwjgl.vulkan.VkResolveImageInfo2 r0 = new org.lwjgl.vulkan.VkResolveImageInfo2
+            r1 = r0
+            r2 = r6
+            long r2 = org.lwjgl.system.MemoryUtil.memAddress(r2)
+            r3 = r6
+            r1.<init>(r2, r3)
+            return r0
+    }
+
+    public static org.lwjgl.vulkan.VkResolveImageInfo2 create(long r6) {
+            org.lwjgl.vulkan.VkResolveImageInfo2 r0 = new org.lwjgl.vulkan.VkResolveImageInfo2
+            r1 = r0
+            r2 = r6
+            r3 = 0
+            r1.<init>(r2, r3)
+            return r0
+    }
+
+    @javax.annotation.Nullable
+    public static org.lwjgl.vulkan.VkResolveImageInfo2 createSafe(long r6) {
+            r0 = r6
+            r1 = 0
+            int r0 = (r0 > r1 ? 1 : (r0 == r1 ? 0 : -1))
+            if (r0 != 0) goto La
+            r0 = 0
+            goto L13
+        La:
+            org.lwjgl.vulkan.VkResolveImageInfo2 r0 = new org.lwjgl.vulkan.VkResolveImageInfo2
+            r1 = r0
+            r2 = r6
+            r3 = 0
+            r1.<init>(r2, r3)
+        L13:
+            return r0
+    }
+
+    public static org.lwjgl.vulkan.VkResolveImageInfo2.Buffer malloc(int r6) {
+            org.lwjgl.vulkan.VkResolveImageInfo2$Buffer r0 = new org.lwjgl.vulkan.VkResolveImageInfo2$Buffer
+            r1 = r0
+            r2 = r6
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.SIZEOF
+            long r2 = __checkMalloc(r2, r3)
+            long r2 = org.lwjgl.system.MemoryUtil.nmemAllocChecked(r2)
+            r3 = r6
+            r1.<init>(r2, r3)
+            return r0
+    }
+
+    public static org.lwjgl.vulkan.VkResolveImageInfo2.Buffer calloc(int r7) {
+            org.lwjgl.vulkan.VkResolveImageInfo2$Buffer r0 = new org.lwjgl.vulkan.VkResolveImageInfo2$Buffer
+            r1 = r0
+            r2 = r7
+            long r2 = (long) r2
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.SIZEOF
+            long r3 = (long) r3
+            long r2 = org.lwjgl.system.MemoryUtil.nmemCallocChecked(r2, r3)
+            r3 = r7
+            r1.<init>(r2, r3)
+            return r0
+    }
+
+    public static org.lwjgl.vulkan.VkResolveImageInfo2.Buffer create(int r10) {
+            r0 = r10
+            int r1 = org.lwjgl.vulkan.VkResolveImageInfo2.SIZEOF
+            java.nio.ByteBuffer r0 = __create(r0, r1)
+            r11 = r0
+            org.lwjgl.vulkan.VkResolveImageInfo2$Buffer r0 = new org.lwjgl.vulkan.VkResolveImageInfo2$Buffer
+            r1 = r0
+            r2 = r11
+            long r2 = org.lwjgl.system.MemoryUtil.memAddress(r2)
+            r3 = r11
+            r4 = -1
+            r5 = 0
+            r6 = r10
+            r7 = r10
+            r1.<init>(r2, r3, r4, r5, r6, r7)
+            return r0
+    }
+
+    public static org.lwjgl.vulkan.VkResolveImageInfo2.Buffer create(long r6, int r8) {
+            org.lwjgl.vulkan.VkResolveImageInfo2$Buffer r0 = new org.lwjgl.vulkan.VkResolveImageInfo2$Buffer
+            r1 = r0
+            r2 = r6
+            r3 = r8
+            r1.<init>(r2, r3)
+            return r0
+    }
+
+    @javax.annotation.Nullable
+    public static org.lwjgl.vulkan.VkResolveImageInfo2.Buffer createSafe(long r6, int r8) {
+            r0 = r6
+            r1 = 0
+            int r0 = (r0 > r1 ? 1 : (r0 == r1 ? 0 : -1))
+            if (r0 != 0) goto La
+            r0 = 0
+            goto L13
+        La:
+            org.lwjgl.vulkan.VkResolveImageInfo2$Buffer r0 = new org.lwjgl.vulkan.VkResolveImageInfo2$Buffer
+            r1 = r0
+            r2 = r6
+            r3 = r8
+            r1.<init>(r2, r3)
+        L13:
+            return r0
+    }
+
+    public static org.lwjgl.vulkan.VkResolveImageInfo2 malloc(org.lwjgl.system.MemoryStack r6) {
+            org.lwjgl.vulkan.VkResolveImageInfo2 r0 = new org.lwjgl.vulkan.VkResolveImageInfo2
+            r1 = r0
+            r2 = r6
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.ALIGNOF
+            int r4 = org.lwjgl.vulkan.VkResolveImageInfo2.SIZEOF
+            long r2 = r2.nmalloc(r3, r4)
+            r3 = 0
+            r1.<init>(r2, r3)
+            return r0
+    }
+
+    public static org.lwjgl.vulkan.VkResolveImageInfo2 calloc(org.lwjgl.system.MemoryStack r7) {
+            org.lwjgl.vulkan.VkResolveImageInfo2 r0 = new org.lwjgl.vulkan.VkResolveImageInfo2
+            r1 = r0
+            r2 = r7
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.ALIGNOF
+            r4 = 1
+            int r5 = org.lwjgl.vulkan.VkResolveImageInfo2.SIZEOF
+            long r2 = r2.ncalloc(r3, r4, r5)
+            r3 = 0
+            r1.<init>(r2, r3)
+            return r0
+    }
+
+    public static org.lwjgl.vulkan.VkResolveImageInfo2.Buffer malloc(int r7, org.lwjgl.system.MemoryStack r8) {
+            org.lwjgl.vulkan.VkResolveImageInfo2$Buffer r0 = new org.lwjgl.vulkan.VkResolveImageInfo2$Buffer
+            r1 = r0
+            r2 = r8
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.ALIGNOF
+            r4 = r7
+            int r5 = org.lwjgl.vulkan.VkResolveImageInfo2.SIZEOF
+            int r4 = r4 * r5
+            long r2 = r2.nmalloc(r3, r4)
+            r3 = r7
+            r1.<init>(r2, r3)
+            return r0
+    }
+
+    public static org.lwjgl.vulkan.VkResolveImageInfo2.Buffer calloc(int r7, org.lwjgl.system.MemoryStack r8) {
+            org.lwjgl.vulkan.VkResolveImageInfo2$Buffer r0 = new org.lwjgl.vulkan.VkResolveImageInfo2$Buffer
+            r1 = r0
+            r2 = r8
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.ALIGNOF
+            r4 = r7
+            int r5 = org.lwjgl.vulkan.VkResolveImageInfo2.SIZEOF
+            long r2 = r2.ncalloc(r3, r4, r5)
+            r3 = r7
+            r1.<init>(r2, r3)
+            return r0
+    }
+
+    public static int nsType(long r7) {
+            sun.misc.Unsafe r0 = org.lwjgl.vulkan.VkResolveImageInfo2.UNSAFE
+            r1 = 0
+            r2 = r7
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.STYPE
+            long r3 = (long) r3
+            long r2 = r2 + r3
+            int r0 = r0.getInt(r1, r2)
+            return r0
+    }
+
+    public static long npNext(long r5) {
+            r0 = r5
+            int r1 = org.lwjgl.vulkan.VkResolveImageInfo2.PNEXT
+            long r1 = (long) r1
+            long r0 = r0 + r1
+            long r0 = org.lwjgl.system.MemoryUtil.memGetAddress(r0)
+            return r0
+    }
+
+    public static long nsrcImage(long r7) {
+            sun.misc.Unsafe r0 = org.lwjgl.vulkan.VkResolveImageInfo2.UNSAFE
+            r1 = 0
+            r2 = r7
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.SRCIMAGE
+            long r3 = (long) r3
+            long r2 = r2 + r3
+            long r0 = r0.getLong(r1, r2)
+            return r0
+    }
+
+    public static int nsrcImageLayout(long r7) {
+            sun.misc.Unsafe r0 = org.lwjgl.vulkan.VkResolveImageInfo2.UNSAFE
+            r1 = 0
+            r2 = r7
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.SRCIMAGELAYOUT
+            long r3 = (long) r3
+            long r2 = r2 + r3
+            int r0 = r0.getInt(r1, r2)
+            return r0
+    }
+
+    public static long ndstImage(long r7) {
+            sun.misc.Unsafe r0 = org.lwjgl.vulkan.VkResolveImageInfo2.UNSAFE
+            r1 = 0
+            r2 = r7
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.DSTIMAGE
+            long r3 = (long) r3
+            long r2 = r2 + r3
+            long r0 = r0.getLong(r1, r2)
+            return r0
+    }
+
+    public static int ndstImageLayout(long r7) {
+            sun.misc.Unsafe r0 = org.lwjgl.vulkan.VkResolveImageInfo2.UNSAFE
+            r1 = 0
+            r2 = r7
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.DSTIMAGELAYOUT
+            long r3 = (long) r3
+            long r2 = r2 + r3
+            int r0 = r0.getInt(r1, r2)
+            return r0
+    }
+
+    public static int nregionCount(long r7) {
+            sun.misc.Unsafe r0 = org.lwjgl.vulkan.VkResolveImageInfo2.UNSAFE
+            r1 = 0
+            r2 = r7
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.REGIONCOUNT
+            long r3 = (long) r3
+            long r2 = r2 + r3
+            int r0 = r0.getInt(r1, r2)
+            return r0
+    }
+
+    public static org.lwjgl.vulkan.VkImageResolve2.Buffer npRegions(long r5) {
+            r0 = r5
+            int r1 = org.lwjgl.vulkan.VkResolveImageInfo2.PREGIONS
+            long r1 = (long) r1
+            long r0 = r0 + r1
+            long r0 = org.lwjgl.system.MemoryUtil.memGetAddress(r0)
+            r1 = r5
+            int r1 = nregionCount(r1)
+            org.lwjgl.vulkan.VkImageResolve2$Buffer r0 = org.lwjgl.vulkan.VkImageResolve2.create(r0, r1)
+            return r0
+    }
+
+    public static void nsType(long r7, int r9) {
+            sun.misc.Unsafe r0 = org.lwjgl.vulkan.VkResolveImageInfo2.UNSAFE
+            r1 = 0
+            r2 = r7
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.STYPE
+            long r3 = (long) r3
+            long r2 = r2 + r3
+            r3 = r9
+            r0.putInt(r1, r2, r3)
+            return
+    }
+
+    public static void npNext(long r5, long r7) {
+            r0 = r5
+            int r1 = org.lwjgl.vulkan.VkResolveImageInfo2.PNEXT
+            long r1 = (long) r1
+            long r0 = r0 + r1
+            r1 = r7
+            org.lwjgl.system.MemoryUtil.memPutAddress(r0, r1)
+            return
+    }
+
+    public static void nsrcImage(long r7, long r9) {
+            sun.misc.Unsafe r0 = org.lwjgl.vulkan.VkResolveImageInfo2.UNSAFE
+            r1 = 0
+            r2 = r7
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.SRCIMAGE
+            long r3 = (long) r3
+            long r2 = r2 + r3
+            r3 = r9
+            r0.putLong(r1, r2, r3)
+            return
+    }
+
+    public static void nsrcImageLayout(long r7, int r9) {
+            sun.misc.Unsafe r0 = org.lwjgl.vulkan.VkResolveImageInfo2.UNSAFE
+            r1 = 0
+            r2 = r7
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.SRCIMAGELAYOUT
+            long r3 = (long) r3
+            long r2 = r2 + r3
+            r3 = r9
+            r0.putInt(r1, r2, r3)
+            return
+    }
+
+    public static void ndstImage(long r7, long r9) {
+            sun.misc.Unsafe r0 = org.lwjgl.vulkan.VkResolveImageInfo2.UNSAFE
+            r1 = 0
+            r2 = r7
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.DSTIMAGE
+            long r3 = (long) r3
+            long r2 = r2 + r3
+            r3 = r9
+            r0.putLong(r1, r2, r3)
+            return
+    }
+
+    public static void ndstImageLayout(long r7, int r9) {
+            sun.misc.Unsafe r0 = org.lwjgl.vulkan.VkResolveImageInfo2.UNSAFE
+            r1 = 0
+            r2 = r7
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.DSTIMAGELAYOUT
+            long r3 = (long) r3
+            long r2 = r2 + r3
+            r3 = r9
+            r0.putInt(r1, r2, r3)
+            return
+    }
+
+    public static void nregionCount(long r7, int r9) {
+            sun.misc.Unsafe r0 = org.lwjgl.vulkan.VkResolveImageInfo2.UNSAFE
+            r1 = 0
+            r2 = r7
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.REGIONCOUNT
+            long r3 = (long) r3
+            long r2 = r2 + r3
+            r3 = r9
+            r0.putInt(r1, r2, r3)
+            return
+    }
+
+    public static void npRegions(long r5, org.lwjgl.vulkan.VkImageResolve2.Buffer r7) {
+            r0 = r5
+            int r1 = org.lwjgl.vulkan.VkResolveImageInfo2.PREGIONS
+            long r1 = (long) r1
+            long r0 = r0 + r1
+            r1 = r7
+            long r1 = r1.address()
+            org.lwjgl.system.MemoryUtil.memPutAddress(r0, r1)
+            r0 = r5
+            r1 = r7
+            int r1 = r1.remaining()
+            nregionCount(r0, r1)
+            return
+    }
+
+    public static void validate(long r5) {
+            r0 = r5
+            int r1 = org.lwjgl.vulkan.VkResolveImageInfo2.PREGIONS
+            long r1 = (long) r1
+            long r0 = r0 + r1
+            long r0 = org.lwjgl.system.MemoryUtil.memGetAddress(r0)
+            long r0 = org.lwjgl.system.Checks.check(r0)
+            return
+    }
+
+    @Override // org.lwjgl.system.Struct
+    protected /* bridge */ /* synthetic */ org.lwjgl.system.Struct create(long r6, @javax.annotation.Nullable java.nio.ByteBuffer r8) {
+            r5 = this;
+            r0 = r5
+            r1 = r6
+            r2 = r8
+            org.lwjgl.vulkan.VkResolveImageInfo2 r0 = r0.create(r1, r2)
+            return r0
+    }
+
+    static {
+            r0 = 8
+            org.lwjgl.system.Struct$Member[] r0 = new org.lwjgl.system.Struct.Member[r0]
+            r1 = r0
+            r2 = 0
+            r3 = 4
+            org.lwjgl.system.Struct$Member r3 = __member(r3)
+            r1[r2] = r3
+            r1 = r0
+            r2 = 1
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.POINTER_SIZE
+            org.lwjgl.system.Struct$Member r3 = __member(r3)
+            r1[r2] = r3
+            r1 = r0
+            r2 = 2
+            r3 = 8
+            org.lwjgl.system.Struct$Member r3 = __member(r3)
+            r1[r2] = r3
+            r1 = r0
+            r2 = 3
+            r3 = 4
+            org.lwjgl.system.Struct$Member r3 = __member(r3)
+            r1[r2] = r3
+            r1 = r0
+            r2 = 4
+            r3 = 8
+            org.lwjgl.system.Struct$Member r3 = __member(r3)
+            r1[r2] = r3
+            r1 = r0
+            r2 = 5
+            r3 = 4
+            org.lwjgl.system.Struct$Member r3 = __member(r3)
+            r1[r2] = r3
+            r1 = r0
+            r2 = 6
+            r3 = 4
+            org.lwjgl.system.Struct$Member r3 = __member(r3)
+            r1[r2] = r3
+            r1 = r0
+            r2 = 7
+            int r3 = org.lwjgl.vulkan.VkResolveImageInfo2.POINTER_SIZE
+            org.lwjgl.system.Struct$Member r3 = __member(r3)
+            r1[r2] = r3
+            org.lwjgl.system.Struct$Layout r0 = __struct(r0)
+            r5 = r0
+            r0 = r5
+            int r0 = r0.getSize()
+            org.lwjgl.vulkan.VkResolveImageInfo2.SIZEOF = r0
+            r0 = r5
+            int r0 = r0.getAlignment()
+            org.lwjgl.vulkan.VkResolveImageInfo2.ALIGNOF = r0
+            r0 = r5
+            r1 = 0
+            int r0 = r0.offsetof(r1)
+            org.lwjgl.vulkan.VkResolveImageInfo2.STYPE = r0
+            r0 = r5
+            r1 = 1
+            int r0 = r0.offsetof(r1)
+            org.lwjgl.vulkan.VkResolveImageInfo2.PNEXT = r0
+            r0 = r5
+            r1 = 2
+            int r0 = r0.offsetof(r1)
+            org.lwjgl.vulkan.VkResolveImageInfo2.SRCIMAGE = r0
+            r0 = r5
+            r1 = 3
+            int r0 = r0.offsetof(r1)
+            org.lwjgl.vulkan.VkResolveImageInfo2.SRCIMAGELAYOUT = r0
+            r0 = r5
+            r1 = 4
+            int r0 = r0.offsetof(r1)
+            org.lwjgl.vulkan.VkResolveImageInfo2.DSTIMAGE = r0
+            r0 = r5
+            r1 = 5
+            int r0 = r0.offsetof(r1)
+            org.lwjgl.vulkan.VkResolveImageInfo2.DSTIMAGELAYOUT = r0
+            r0 = r5
+            r1 = 6
+            int r0 = r0.offsetof(r1)
+            org.lwjgl.vulkan.VkResolveImageInfo2.REGIONCOUNT = r0
+            r0 = r5
+            r1 = 7
+            int r0 = r0.offsetof(r1)
+            org.lwjgl.vulkan.VkResolveImageInfo2.PREGIONS = r0
+            return
+    }
+}
